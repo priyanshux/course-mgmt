@@ -12,7 +12,7 @@ class DatabaseManage(object):
 			with con:
 				cur = con.cursor()
 				cur.execute("CREATE TABLE IF NOT EXISTS course(Id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, description TEXT, price TEXT, is_private BOOLEAN NOT NULL DEFAULT 1)")
-			except Exception(exc):
+			except Exception():
 				print("Unable to create a DB!")
 
 #TODO: create data
@@ -56,4 +56,3 @@ def main():
 
 	db = DatabaseManage()
 
-	
