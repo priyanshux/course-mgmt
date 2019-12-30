@@ -69,5 +69,12 @@ def main():
 
 	choice = input("\nEnter a choice: ")
 
+	if choice == "1":
+		name = input("\nEnter course name: ")
+		description = input("\nEnter course description: ")
+		price = input("\nEnter course price: ")
+		private = input("\nIs this course private (0/1): ")
 
-	
+
+
+
