@@ -76,5 +76,16 @@ def main():
 		private = input("\nIs this course private (0/1): ")
 
 
+		if db.insert_data([name, description, price, private]):
+			print("Course was inserted successfully")
+		else:
+			print("Error!")
+
+	elif choice == "2":
+		print("\n:: Course List ::\n")
+
+		
+	
+		
 
 
