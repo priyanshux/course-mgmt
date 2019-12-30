@@ -12,7 +12,7 @@ class DatabaseManage(object):
 			with con:
 				cur = con.cursor()
 				cur.execute("CREATE TABLE IF NOT EXISTS course(Id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, description TEXT, price TEXT, is_private BOOLEAN NOT NULL DEFAULT 1)")
-			except Exception():
+			except Exception(exc):
 				print("Unable to create a DB!")
 
 #TODO: create data
@@ -50,9 +50,24 @@ def delete_data(self, id):
 #TODO: provide interface to user
 
 def main():
-	print("*\n"*40)
+	print("*"*40)
 	print("\n:: COURSE MANAGEMENT :: \n")
-	print("*\n"*40)
+	print("*"*40)
+	print("\n")
 
 	db = DatabaseManage()
 
+	print("#"*40)
+	print("\n :: User Manual :: \n")
+	print("#"*40)
+
+	print("\nPress 1. Insert a new course")
+	print("\npress 2. Show all courses")
+	print("\nPress 3. Delete a course (NEED ID)\n")
+	print("#"*40)
+	print("\n")
+
+	choice = input("\nEnter a choice: ")
+
+
+	
